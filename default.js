@@ -25,7 +25,6 @@ $(function(){
         var menu = $('<div />');
         var menuOption = $('<span />');
         
-        
         backdrop.attr('id', "backdrop");
         menu.attr('id', "mainMenu");
         menuOption.attr('id', "mainMenuOption");

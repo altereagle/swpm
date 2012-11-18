@@ -41,10 +41,10 @@ body {
 #mainMenu {
     z-index: 2;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    height: 50%;
-    width: 50%;
+    top: 0;
+    left: 0;
+    height: 90%;
+    width: 33%;
     color: #fff;
     text-align: center;
     -webkit-touch-callout: none;
@@ -60,17 +60,16 @@ body {
     border-radius: 15px;
 }
 #mainMenuOption:hover {
-    background-color: #555;   
+    background-color: #333;   
 }
 #backdrop {
     z-index: 1;
     position: absolute;
-    top: 25%;
-    left: 25%;
-    height: 50%;
-    width: 50%;
-    opacity: .8;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 33%;
+    opacity: .5;
     background-color: #000;
-    border-radius: 10px;
-    box-shadow: 0px 10px 30px #000;
+    box-shadow: 50px 0px 100px #000;
 }
