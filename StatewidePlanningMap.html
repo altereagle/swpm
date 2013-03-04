@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
   <head>
+    <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'> <!-- Font -->
     <script type="text/javascript" src="mapScript.js"></script>
     <script type="text/javascript" src="ajaxgold.js"></script>
     <script type="text/javascript" src="excanvas.js"></script>		
@@ -11,7 +12,7 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">	
     <title>Test Map</title>
   </head>
-  <body onload="init()" oncontextmenu="return false" bgcolor="grey">
+  <body onload="init()" oncontextmenu="return false">
     <div id="outerDiv" ondblclick="dblclickZoomIn(event)">
        <div id="innerDiv"></div>		
        <canvas id="theCanvas" width="3000" height="3000"></canvas>			 			 	 			 
@@ -41,21 +42,23 @@
   		<div id="tableOps">
 			   &nbsp;<span class="tabs" title="Area Offices" id="cmdAreaOffices" onclick="toggleTable('AreaOffices')"> Area Offices </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Incorporated Cities" id="cmdCities" onclick="toggleTable('Cities')"> Cities </span>
-			   &nbsp;|&nbsp;<span class="tabs" title="Texas Counties" id="cmdCounties" onclick="toggleTable('Counties')"> Counties </span>	
+			   &nbsp;|&nbsp;<span class="tabs" title="Texas Counties" id="cmdCounties" onclick="toggleTable('Counties')"> Counties </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="TxDOT Districts" id="cmdDistricts" onclick="toggleTable('Districts')"> Districts </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Maintenance Sections" id="cmdMaintSections" onclick="toggleTable('MaintSections')"> Maintenance Sections </span>
-			   &nbsp;|&nbsp;<span class="tabs" title="Metropolitan Planning Organizations" id="cmdMPOs" onclick="toggleTable('MPOs')"> MPOs </span>	
-			   &nbsp;|&nbsp;<span class="tabs" title="State and Federal Parks" id="cmdParks" onclick="toggleTable('Parks')"> Parks </span> 					 				 					 		
+			   &nbsp;|&nbsp;<span class="tabs" title="Metropolitan Planning Organizations" id="cmdMPOs" onclick="toggleTable('MPOs')"> MPOs </span>
+			   &nbsp;|&nbsp;<span class="tabs" title="State and Federal Parks" id="cmdParks" onclick="toggleTable('Parks')"> Parks </span>
   		</div>
       <div id="tableData"></div>																								
 		</div>		
     <div id="tocDiv">
-			&nbsp;<span class="tabs" title="Maps and Data" id="mapsTab" onclick="toggleTOC('prjMaps','prjIdentify','prjSearch','prjMeasure')"> Maps </span>
-			&nbsp;|&nbsp;<span class="tabs" title="Identify Features" id="identifyTab" onclick="toggleTOC('prjIdentify','prjMaps','prjSearch','prjMeasure')"> Identify </span>
-			&nbsp;|&nbsp;<span class="tabs" title="Search for Features" id="searchTab" onclick="toggleTOC('prjSearch','prjMaps','prjIdentify','prjMeasure')"> Search </span>
-      &nbsp;|&nbsp;<span class="tabs" title="Measure Distance" id="measureTab" onclick="toggleTOC('prjMeasure','prjMaps','prjIdentify','prjSearch')"> Measure &nbsp;</span>			
+            <div id="tabsContainer" class="nohilite">
+                <span class="tabs" title="Maps and Data" id="mapsTab" onclick="toggleTOC('prjMaps','prjIdentify','prjSearch','prjMeasure')"> Maps </span>
+                <span class="tabs" title="Identify Features" id="identifyTab" onclick="toggleTOC('prjIdentify','prjMaps','prjSearch','prjMeasure')"> Identify </span>
+                <span class="tabs" title="Search for Features" id="searchTab" onclick="toggleTOC('prjSearch','prjMaps','prjIdentify','prjMeasure')"> Search </span>
+                <span class="tabs" title="Measure Distance" id="measureTab" onclick="toggleTOC('prjMeasure','prjMaps','prjIdentify','prjSearch')"> Measure </span>
+            </div>
   		<div id="prjMaps">
-      	   <table class="tocTables">
+      	   <table class="tocTables nohilite">
       			 <tr><td id="COG" class="notselected" onclick=changeMap('COG',".png",'2') title="Councils of Government Map">COG</td></tr>
       	     <tr><td id="ControlSection" class="notselected" onclick=changeMap('ControlSection',".png",'4') title="Control Section Map">Control Section</td></tr>
       	     <tr><td id="Highway" class="selected" onclick=changeMap('Highway',".png",'5') title="Highway Base Map">Highway</td></tr>
