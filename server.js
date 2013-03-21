@@ -1,6 +1,6 @@
 var connect = require("connect");
 var server = connect()
-    .use(connect.static("app"))
+    .use(connect.static("./app"))
     .use(function (request, response) {
     response.statusCode = 403;
     response.end("403: Bad Request!");
