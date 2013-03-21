@@ -16,34 +16,31 @@ body {
 }
 .selected {
     color: #fff;
-    background-color: #000;
+    background-color: #6699CC;
+	font-weight: bold;
 }
 .notselected {
-    box-shadow: inset -10px 0 20px -5px #ccc;
+    color: #000;
+	background-color: #fff;
 }
     .notselected:hover {
         color: #fff;
-        background-color: #00f;
-        box-shadow: inset -10px 0 20px -5px #0ff;
+        background-color: #6699CC;
     }
 #tabsContainer{
     padding: 5px;
-    background-color: #fff;
-    box-shadow: 15px 5px 15px -10px #000;
 }
-    #tabsContainer:hover{
-		color: #fff;
-        background-color: #000;
-    }
     .tabs {
         font-family: Helvetica, sans-serif;
+		font-size: .9em;
         cursor: pointer;
         margin-right: 2px;
-        padding: 2px;
+        padding: 5px;
     }
-        .tabs:hover{
-            border-bottom: 1px solid #fff;
-        }
+	.tabs:hover {
+		color: #fff;
+		background-color: #000;
+	}
 table.tocTables {
     font-family: 'ABeeZee', sans-serif;
     margin-top: 10px;
@@ -205,9 +202,10 @@ th {
 }
 #tableOps{
   position: absolute; 
-  left: 3px; 
-  top: 3px;
-  overflow: auto;
+  left: 0; 
+  top: 0;
+  padding: 5px 0 5px 0;
+  width: 100%;
 }
 #tableData{
   position: absolute; 
@@ -221,21 +219,8 @@ th {
     top: 5px;
     overflow: auto;
     border: 1px solid #000;
-    box-shadow: inset -10px 0 40px -5px #bbb;
     border-radius: 0.25em 0 0 0.25em;
-    background-color: #E0E0E0;
-    background-image: linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
-    background-image: -o-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
-    background-image: -moz-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
-    background-image: -webkit-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
-    background-image: -ms-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
-    background-image: -webkit-gradient(
-        linear,
-        left top,
-        right top,
-        color-stop(0, rgb(255,255,255)),
-        color-stop(1, rgb(224,224,224))
-    );
+	background-color: #6699CC;
 }
 #readoutDiv {
   position: absolute; 
