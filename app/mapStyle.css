@@ -1,0 +1,285 @@
+body {
+	background-color: #ccc;
+}
+#theCanvas {
+	position: absolute;
+	left: 0;
+	top: 0;
+}
+.nohilite {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.selected {
+    color: #fff;
+    background-color: #000;
+}
+.notselected {
+    box-shadow: inset -10px 0 20px -5px #ccc;
+}
+    .notselected:hover {
+        color: #fff;
+        background-color: #00f;
+        box-shadow: inset -10px 0 20px -5px #0ff;
+    }
+#tabsContainer{
+    padding: 5px;
+    background-color: #fff;
+    box-shadow: 15px 5px 15px -10px #000;
+}
+    #tabsContainer:hover{
+		color: #fff;
+        background-color: #000;
+    }
+    .tabs {
+        font-family: Helvetica, sans-serif;
+        cursor: pointer;
+        margin-right: 2px;
+        padding: 2px;
+    }
+        .tabs:hover{
+            border-bottom: 1px solid #fff;
+        }
+table.tocTables {
+    font-family: 'ABeeZee', sans-serif;
+    margin-top: 10px;
+    width: 100%;
+    background-color: #fff;
+    cursor: pointer;
+    border-top: 5px solid #000;
+}
+th.tocTables {
+	border:0px solid white;
+}
+tr.tocTables {
+	border:0px solid white;
+}
+table {
+  border-collapse:collapse;
+}
+table, th, td {
+  border:1px solid black;
+	padding: 3px;
+}
+th {
+  background-color:#6699CC;
+  color:white;
+}
+#prjMaps {
+  position: absolute; 
+  top: 25px; 
+  left: 5px;
+  width:235px;
+  display: block;	
+}
+#prjIdentify {
+  position: absolute; 
+  top: 25px; 
+  left: 5px;
+  width:235px;
+	display: none;
+}
+#prjSearch {
+  position: absolute; 
+  top: 25px; 
+  left: 5px;
+  width:235px;
+  display: none;
+}
+#prjMeasure {
+  position: absolute; 
+  top: 25px; 
+  left: 5px;
+  width:235px;
+  display: none;
+}
+#outerDiv {
+  background-color:#FFFFCC;
+  height: 500px;
+  width: 500px;
+  border: 1px solid black;
+  position: absolute; 
+  left:277px; top:5px; 
+  overflow: hidden;
+  border-radius: 0 0.25em 0 0;
+}
+#innerDiv {
+  position: absolute; 
+  left: 0px; 
+  top: 0px;
+  height: 1056px;
+  width: 1056px; 
+  border: 1px solid black;	
+  background-color:#FFFFFF;
+  border-radius: 0 0.25em 0 0;
+}
+#mapCanvas {
+  position: absolute;
+  left: 0px;top: 0px;
+}
+#baseMapOne{
+  position: absolute; 
+  top: 10px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 105px;
+}
+#baseMapTwo{
+  position: absolute; 
+  top: 35px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 105px;
+}
+#linkOut {
+  position: absolute; 
+  top: 14px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 102px; 
+  text-align: center;
+  border: 1px solid grey;
+}
+#drawBtn {
+  position: absolute; 
+  top: 91px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 102px; 
+  text-align: center;
+  border: 1px solid grey;
+}
+#clearBtn {
+  position: absolute; 
+  top: 118px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 102px; 
+  text-align: center;
+  border: 1px solid grey;
+}
+#saveBtn {
+  position: absolute; 
+  top: 145px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 102px; 
+  text-align: center;
+  border: 1px solid grey;
+}
+#clearStorageBtn {
+  position: absolute; 
+  top: 172px; 
+  right: 15px; 
+  color:black;
+  background-color:white;
+  width: 102px; 
+  text-align: center;
+  border: 1px solid grey;
+}
+#measureResults {
+  position: absolute;
+  bottom: 2px; 
+  right: 5px; 
+  color:black;
+  background-color:white;
+}
+#tableDiv {
+  border: 1px solid black; 
+  position: absolute; 
+  left: 277px; 
+  bottom: 200px;
+  overflow: auto;
+  background-color:#FFFFFF;
+  border-radius: 0 0 0.25em 0;
+}
+#tableOps{
+  position: absolute; 
+  left: 3px; 
+  top: 3px;
+  overflow: auto;
+}
+#tableData{
+  position: absolute; 
+  left: 5px; 
+  top: 30px;
+  overflow: auto;
+}
+#tocDiv {
+    position: absolute;
+    left: 5px;
+    top: 5px;
+    overflow: auto;
+    border: 1px solid #000;
+    box-shadow: inset -10px 0 40px -5px #bbb;
+    border-radius: 0.25em 0 0 0.25em;
+    background-color: #E0E0E0;
+    background-image: linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
+    background-image: -o-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
+    background-image: -moz-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
+    background-image: -webkit-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
+    background-image: -ms-linear-gradient(left , rgb(255,255,255) 0%, rgb(224,224,224) 100%);
+    background-image: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        color-stop(0, rgb(255,255,255)),
+        color-stop(1, rgb(224,224,224))
+    );
+}
+#readoutDiv {
+  position: absolute; 
+  bottom: 247px; 
+  left: 285px; 
+  font-weight:bold; 
+  color:black; 
+  background-color:white;
+}
+#navTree{
+  position: absolute; 
+  top: 12px; 
+  left: 285px;
+}
+#help {
+  color:black;
+  background-color:white;
+  width: 54px; 
+  text-align: center;
+  border: 1px solid black;
+}
+#helpContent {
+  position: absolute; 
+  top: 60px; 
+  width:325px;
+  color:black;
+  background-color:white; 
+  text-align: left;
+  border: 1px solid black;
+  display: none;
+}
+.clickable {
+  cursor:pointer;
+  color:blue;
+}
+.shaded {
+  background-color:#D8D8D8;
+}
+label {
+  display:block;
+}
+input {
+  display:inline;
+}
+select {
+  width:155px;
+}
