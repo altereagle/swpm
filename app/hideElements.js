@@ -4,72 +4,49 @@
     $(function(){   // Runs when DOM is ready
 		var hideToc = $('<button />')
 			.attr('id','hideToc')
-			.html('Hide Table of Contents')
+			.html('Hide Table')
 			.css({
 				zIndex: 9,
 				position: 'absolute',
-				top: 10,
-				right: 110
+				bottom: 10,
+				right: 10
 			})
 			.click(function(){
-				var tocDiv = $('#tocDiv');
-				var tocVisible = tocDiv.is(':visible');
+				// TODO: close tableDiv instead of TOC
+				var tableDiv = $('#tableDiv');
+				var tocVisible = tableDiv.is(':visible');
 				
 				if(tocVisible){
-					tocDiv.fadeOut(function(){
+					tableDiv.fadeOut(function(){
 						$('#outerDiv').animate({
-							left: "10px",
-							width: ($(document).innerWidth()-40) + "px"
+							height: ($(document).innerHeight()-15) + "px"
 						});
 						$('#tableDiv').animate({
-							left: "10px",
-							width: ($(document).innerWidth()-40) + "px"
-						});
-						$('#navTree').animate({
-							left: "20px"
+							bottom: "-" + ($(this).height()-40) + "px"
 						});
 						$('#readoutDiv').animate({
-							left: "20px"
-						});
-						$('#linkOut').animate({
-							right: "35px"
-						});
-						$('#hideToc').animate({
-							right: "130px"
+							bottom: "20px"
 						});
 					});
-					$(this).html('Show Table of Contents')
+					$(this).html('Show Table')
 				} else {
-					$('#navTree').animate({
-							left: "285px"
-					});
 					$('#readoutDiv').animate({
-							left: "285px"
+						bottom: "252px"
 					});
-					$('#linkOut').animate({
-							right: "15px"
-						});
-						$('#hideToc').animate({
-							right: "110px"
-						});
 					$('#outerDiv').animate({
-						left: "277px",
-						width: ($(document).width()- 285) + "px"
+						height: ($(document).innerHeight()- $('#tableDiv').height() - 15) + "px"
 					});
 					$('#tableDiv').animate({
-						left: "277px",
-						width: ($(document).width()- 285) + "px"
+						bottom: ($(this).height()+ 15) + "px"
 					},function(){
-						tocDiv.fadeIn(function(){
+						tableDiv.fadeIn(function(){
 							resizeRootElements()
 							setTimeout(resizeRootElements,500)
 						});
 					});
-						// resize innerdiv
-						// resize tabe (if visible)
-					$(this).html('Hide Table of Contents')
+					$(this).html('Hide Table')
 				}
 			})
-			.appendTo($('body'));
+			.appendTo($('#outerDiv'));
 	});
 }(jQuery));

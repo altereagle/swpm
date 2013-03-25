@@ -1,5 +1,7 @@
 body {
 	background-color: #ccc;
+	margin: 0;
+	padding: 0;
 }
 #theCanvas {
 	position: absolute;
@@ -16,134 +18,160 @@ body {
 }
 .selected {
     color: #fff;
+    text-shadow: 0 1px 1px #000;
     background-color: #6699CC;
 	font-weight: bold;
 }
 .notselected {
     color: #000;
-	background-color: #fff;
 }
-    .notselected:hover {
-        color: #fff;
-        background-color: #6699CC;
-    }
+
 #tabsContainer{
     padding: 5px;
+    background-color: #fff;
 }
     .tabs {
         font-family: Helvetica, sans-serif;
-		font-size: .9em;
+		font-size: 0.9em;
         cursor: pointer;
-        margin-right: 2px;
+        margin-right: 0;
         padding: 5px;
     }
 	.tabs:hover {
 		color: #fff;
-		background-color: #000;
+		background-color: #6699CC;
 	}
 table.tocTables {
-    font-family: 'ABeeZee', sans-serif;
-    margin-top: 10px;
+    font-family: 'ABeeZee', Arial, sans-serif;
     width: 100%;
     background-color: #fff;
     cursor: pointer;
-    border-top: 5px solid #000;
+    border: 2px solid #000;
 }
 th.tocTables {
-	border:0px solid white;
+	border:0;
 }
 tr.tocTables {
-	border:0px solid white;
+	border:0;
 }
 table {
   border-collapse:collapse;
 }
 table, th, td {
-  border:1px solid black;
 	padding: 3px;
 }
 th {
-  background-color:#6699CC;
-  color:white;
+    font-family: 'ABeeZee', Arial, sans-serif;
+    text-shadow: 0 1px 1px #000;
+	text-transform: uppercase;
+	font-size: 0.8em;
+    color:white;
+    background-color:#6699CC;
+    border-bottom: 2px solid #000;
+	box-shadow: 0 5px 10px -5px #000;
 }
 #prjMaps {
-  position: absolute; 
-  top: 25px; 
-  left: 5px;
-  width:235px;
-  display: block;	
+    position: absolute;
+    margin-top: 10px;
+    left: 1%;
+    width: 98%;
+    display: block;
 }
+	#prjMaps > table {
+		box-shadow: 0 5px 10px -5px #000;
+	}
 #prjIdentify {
-  position: absolute; 
-  top: 25px; 
-  left: 5px;
-  width:235px;
-	display: none;
+    position: absolute;
+    margin-top: 10px;
+    left: 1%;
+    width: 98%;
+    display: none;
 }
+	#prjIdentify > table {
+		box-shadow: 0 5px 10px -5px #000;
+	}
 #prjSearch {
-  position: absolute; 
-  top: 25px; 
-  left: 5px;
-  width:235px;
-  display: none;
+    position: absolute;
+    margin-top: 10px;
+    left: 1%;
+    width: 98%;
+    display: none;
 }
+	#prjSearch > table {
+		box-shadow: 0 5px 10px -5px #000;
+	}
 #prjMeasure {
-  position: absolute; 
-  top: 25px; 
-  left: 5px;
-  width:235px;
-  display: none;
+    position: absolute;
+    margin-top: 10px;
+    left: 1%;
+    width: 98%;
+    display: none;
 }
+	#prjMeasure > table {
+		box-shadow: 0 5px 10px -5px #000;
+	}
 #outerDiv {
-  background-color:#FFFFCC;
-  height: 500px;
-  width: 500px;
-  border: 1px solid black;
-  position: absolute; 
-  left:277px; top:5px; 
-  overflow: hidden;
-  border-radius: 0 0.25em 0 0;
+    background-color:#FFFFCC;
+    height: 500px;
+    width: 500px;
+    border: 1px solid black;
+    position: absolute;
+    left:277px; top:5px;
+    overflow: hidden;
+    border-radius: 0 0.25em 0 0;
 }
 #innerDiv {
-  position: absolute; 
-  left: 0px; 
-  top: 0px;
-  height: 1056px;
-  width: 1056px; 
-  border: 1px solid black;	
-  background-color:#FFFFFF;
-  border-radius: 0 0.25em 0 0;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    height: 1056px;
+    width: 1056px;
+    border: 1px solid black;
+    background-color:#FFFFFF;
+    border-radius: 0 0.25em 0 0;
 }
 #mapCanvas {
-  position: absolute;
-  left: 0px;top: 0px;
+    position: absolute;
+    left: 0;top: 0px;
 }
 #baseMapOne{
-  position: absolute; 
-  top: 10px; 
-  right: 15px; 
-  color:black;
-  background-color:white;
-  width: 105px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color:black;
+    background-color:white;
+    width: 105px;
 }
 #baseMapTwo{
-  position: absolute; 
-  top: 35px; 
-  right: 15px; 
-  color:black;
-  background-color:white;
-  width: 105px;
+    position: absolute;
+    top: 35px;
+    right: 15px;
+    color:black;
+    background-color:white;
+    width: 105px;
 }
 #linkOut {
-  position: absolute; 
-  top: 14px; 
-  right: 15px; 
-  color:black;
-  background-color:white;
-  width: 102px; 
-  text-align: center;
-  border: 1px solid grey;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    font-family: Arial, sans-serif;
+    font-size: 0.8em;
+    color:black;
+    background-color:white;
+    padding: 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 0 0.25em 0 0;
+	box-shadow: 0 5px 10px -5px #000;
 }
+    #linkOut:hover {
+        background-color: #6699CC;
+        border-color: #000;
+    }
+    #linkOut > a:hover {
+        color: #fff;
+        text-decoration: none;
+    }
 #drawBtn {
   position: absolute; 
   top: 91px; 
@@ -193,26 +221,37 @@ th {
 }
 #tableDiv {
   border: 1px solid black; 
-  position: absolute; 
+  position: absolute;
   left: 277px; 
-  bottom: 200px;
+  bottom: 0px;
   overflow: auto;
-  background-color:#FFFFFF;
   border-radius: 0 0 0.25em 0;
+  background-color: #fff;
 }
 #tableOps{
-  position: absolute; 
-  left: 0; 
-  top: 0;
-  padding: 5px 0 5px 0;
-  width: 100%;
+	z-index: 1;
+	position: absolute;
+	left: 11px;
+	top: 12px;
+	padding: 0;
+	width: auto;
+	background-color: #fff;
 }
+	#tableOps > span{
+		margin: 0;
+	}
 #tableData{
-  position: absolute; 
-  left: 5px; 
-  top: 30px;
-  overflow: auto;
+	position: absolute; 
+	left: 1%; 
+	width: 98%;
+	top: 35px;
+	padding-bottom: 20px;
+	overflow: auto;
 }
+	#tableData > table{
+		background-color: #eee;
+		width: 100%;
+	}
 #tocDiv {
     position: absolute;
     left: 5px;
@@ -223,34 +262,56 @@ th {
 	background-color: #6699CC;
 }
 #readoutDiv {
-  position: absolute; 
-  bottom: 247px; 
-  left: 285px; 
-  font-weight:bold; 
-  color:black; 
-  background-color:white;
+	position: absolute; 
+	bottom: 252px; 
+	left: 282px;
+	padding: 5px;
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+	font-weight:bold; 
+	background-color:white;
+	border: 1px solid #ccc;
+	border-radius: 0 0 0 0.25em;
+	box-shadow: 0 5px 10px -5px #000;
 }
 #navTree{
-  position: absolute; 
-  top: 12px; 
-  left: 285px;
+	position: absolute; 
+	top: 12px; 
+	left: 285px;
 }
 #help {
-  color:black;
-  background-color:white;
-  width: 54px; 
-  text-align: center;
-  border: 1px solid black;
+	color:black;
+	background-color:white;
+	width: 54px;
+	font-family: Arial, sans-serif;
+	font-size: 0.8em;
+	text-align: center;
+	border: 1px solid #ccc;
+	box-shadow: 0 5px 10px -5px #000;
 }
+	#help:hover {
+		color: #fff;
+		background-color: #6699CC;
+        border-color: #000;
+	}
+	 #linkOut:hover {
+        
+    }
+    #linkOut > a:hover {
+        
+    }
 #helpContent {
   position: absolute; 
   top: 60px; 
   width:325px;
-  color:black;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+  font-size: 0.8em;
   background-color:white; 
   text-align: left;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   display: none;
+  box-shadow: 0 5px 10px -5px #000;
 }
 .clickable {
   cursor:pointer;

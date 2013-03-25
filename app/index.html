@@ -2,12 +2,13 @@
 <html>
   <head>
     <link href='http://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet' type='text/css'> <!-- Font -->
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="mapscript.js"></script>
     <script type="text/javascript" src="ajaxgold.js"></script>
     <script type="text/javascript" src="excanvas.js"></script>
-	<script type="text/javascript" src="style.js"></script>	
+	<script type="text/javascript" src="style.js"></script>
+	<script type="text/javascript" src="hideElements.js"></script>	
     <link rel="stylesheet" type="text/css" href="mapStyle.css">
     <meta name="description" content="Roadway Planning Map">
     <meta name="robots" content="INDEX, FOLLOW">
@@ -42,26 +43,27 @@
 		-->								
 		<div id="linkOut" title="View Google Maps" onmouseover="stopMove()">Google Maps</div>
     <div id="tableDiv">
-  		<div id="tableOps">
-			   &nbsp;<span class="tabs" title="Area Offices" id="cmdAreaOffices" onclick="toggleTable('AreaOffices')"> Area Offices </span>
+		<div id="tableOps" class="nohilite">
+			   &nbsp;<span class="tabs selected" title="Area Offices" id="cmdAreaOffices" onclick="toggleTable('AreaOffices')"> Area Offices </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Incorporated Cities" id="cmdCities" onclick="toggleTable('Cities')"> Cities </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Texas Counties" id="cmdCounties" onclick="toggleTable('Counties')"> Counties </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="TxDOT Districts" id="cmdDistricts" onclick="toggleTable('Districts')"> Districts </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Maintenance Sections" id="cmdMaintSections" onclick="toggleTable('MaintSections')"> Maintenance Sections </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="Metropolitan Planning Organizations" id="cmdMPOs" onclick="toggleTable('MPOs')"> MPOs </span>
 			   &nbsp;|&nbsp;<span class="tabs" title="State and Federal Parks" id="cmdParks" onclick="toggleTable('Parks')"> Parks </span>
-  		</div>
-      <div id="tableData"></div>																								
-		</div>		
+		</div>
+		<div id="tableData"></div>																								
+	</div>		
     <div id="tocDiv">
             <div id="tabsContainer" class="nohilite">
-                <span class="tabs" title="Maps and Data" id="mapsTab" onclick="toggleTOC('prjMaps','prjIdentify','prjSearch','prjMeasure')"> Maps </span>
+                <span class="tabs selected" title="Maps and Data" id="mapsTab" onclick="toggleTOC('prjMaps','prjIdentify','prjSearch','prjMeasure')"> Maps </span>
                 <span class="tabs" title="Identify Features" id="identifyTab" onclick="toggleTOC('prjIdentify','prjMaps','prjSearch','prjMeasure')"> Identify </span>
                 <span class="tabs" title="Search for Features" id="searchTab" onclick="toggleTOC('prjSearch','prjMaps','prjIdentify','prjMeasure')"> Search </span>
                 <span class="tabs" title="Measure Distance" id="measureTab" onclick="toggleTOC('prjMeasure','prjMaps','prjIdentify','prjSearch')"> Measure </span>
             </div>
   		<div id="prjMaps">
       	   <table class="tocTables nohilite">
+			<tr><td id="BIKE" class="notselected" onclick=changeMap('Bike',".png",'2') title="Bike Map">Shoulders(>4ft) or Bike Lanes</td></tr>
       			 <tr><td id="COG" class="notselected" onclick=changeMap('COG',".png",'2') title="Councils of Government Map">COG</td></tr>
       	     <tr><td id="ControlSection" class="notselected" onclick=changeMap('ControlSection',".png",'4') title="Control Section Map">Control Section</td></tr>
       	     <tr><td id="Highway" class="selected" onclick=changeMap('Highway',".png",'5') title="Highway Base Map">Highway</td></tr>
