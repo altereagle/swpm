@@ -17,32 +17,30 @@
 				var tocVisible = tableDiv.is(':visible');
 				
 				if(tocVisible){
-					tableDiv.fadeOut(function(){
-						$('#outerDiv').animate({
-							height: ($(document).innerHeight()-15) + "px"
+						tableDiv.animate({
+							top: parseInt(tableDiv.css('top')) + tableDiv.height()
+						},function(){
+							$(this).hide();
+							$('#outerDiv').animate({
+								height: ($(document).innerHeight()-15) + "px"
+							});
+							$('#readoutDiv').animate({
+								bottom: "20px"
+							});
 						});
-						$('#tableDiv').animate({
-							bottom: "-" + ($(this).height()-40) + "px"
-						});
-						$('#readoutDiv').animate({
-							bottom: "20px"
-						});
-					});
-					$(this).html('Show Table')
+					$(this).html('Show Table');
 				} else {
 					$('#readoutDiv').animate({
 						bottom: "252px"
 					});
 					$('#outerDiv').animate({
-						height: ($(document).innerHeight()- $('#tableDiv').height() - 15) + "px"
+						height: ($(document).innerHeight()- $('#tableDiv').height() - 25) + "px"
 					});
-					$('#tableDiv').animate({
-						bottom: ($(this).height()+ 15) + "px"
+					$('#tableDiv').show().animate({
+						top: parseInt(tableDiv.css('top')) - tableDiv.height()
 					},function(){
-						tableDiv.fadeIn(function(){
-							resizeRootElements()
-							setTimeout(resizeRootElements,500)
-						});
+						resizeRootElements();
+						//setTimeout(resizeRootElements,1000);
 					});
 					$(this).html('Hide Table')
 				}

@@ -2,6 +2,7 @@ body {
 	background-color: #ccc;
 	margin: 0;
 	padding: 0;
+	overflow: hidden;
 }
 #theCanvas {
 	position: absolute;
@@ -54,11 +55,21 @@ th.tocTables {
 tr.tocTables {
 	border:0;
 }
+
+#tableData > table > tbody {
+	border: 1px solid #ddd;
+}
+#tableData > table > tbody > tr {
+	border-bottom: 1px solid #ccc;
+}
+#tableData > table > tbody > tr > td {
+	border-left: 1px solid #ddd;
+}
 table {
   border-collapse:collapse;
 }
 table, th, td {
-	padding: 3px;
+	padding: 5px;
 }
 th {
     font-family: 'ABeeZee', Arial, sans-serif;
@@ -67,8 +78,11 @@ th {
 	font-size: 0.8em;
     color:white;
     background-color:#6699CC;
-    border-bottom: 2px solid #000;
-	box-shadow: 0 5px 10px -5px #000;
+    border-bottom: 2px solid #ccc;
+	border-left: 1px solid #6699CC;
+	border-right: 1px solid #6699CC;
+	border-top: 1px solid #6699CC;
+	box-shadow: 0 5px 20px -10px #000;
 }
 #prjMaps {
     position: absolute;
@@ -232,7 +246,7 @@ th {
 	z-index: 1;
 	position: absolute;
 	left: 11px;
-	top: 12px;
+	top: 15px;
 	padding: 0;
 	width: auto;
 	background-color: #fff;
